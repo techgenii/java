@@ -15,7 +15,10 @@ public class Triangle extends Shape{
 		}
 		
 		void PrintShapeArea() {
-			System.out.println("Tirangle Area=" + area(x,y));
+            System.out.println("Triangle length = " + getX());
+            System.out.println("Triangle = " + getY());
+			System.out.println("Triangle Area=" + area(x,y));
+            System.out.println();
 		}
 		
 }
