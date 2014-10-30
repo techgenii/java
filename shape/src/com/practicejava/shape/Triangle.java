@@ -2,15 +2,15 @@ package com.practicejava.shape;
 
 public class Triangle extends Shape{
 	
-		void SetShape(int x, int y) {
+		void SetShape( final int x, final int y ) {
 			super.SetShape(x, y);
 		}
 	
-		int area(int x, int y) {
+		int area(final int x, final int y) {
 			return ((x*y)/2);
 		}
 	
-		void PrintShapeName(String name) {
+		void PrintShapeName( final String name ) {
 			System.out.println("Triangle Shape Name=" + name);
 		}
 		

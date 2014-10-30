@@ -1,6 +1,4 @@
-package com.practicejava.shape;
-
-import java.text.MessageFormat;
+package shape;
 
 public class Circle extends Shape{
 	
@@ -8,18 +6,22 @@ public class Circle extends Shape{
 		super.SetShape(x, y);
 	}
 	
-	int area(final int r, final int y) {
+	@Override
+	public int area(final int r, final int y) {
         // Area = 2 * PI * r
 		return ((int)(2*(Math.PI)*r));
 	}
-		
-	void PrintShapeName(final String name) {
+	
+	@Override
+	public void PrintShapeName(final String name) {
 		System.out.println("Circle Shape Name=" + name);
 	}
 	
-	void PrintShapeArea() {
+	@Override
+	public void PrintShapeArea() {
         System.out.println("Circle radius = " + getX());
-		System.out.println("Circle Area = " + area(x,y));
+		System.out.println("Circle Area = " + area(getX(),getY()));
         System.out.println();
 	}
+	
 }

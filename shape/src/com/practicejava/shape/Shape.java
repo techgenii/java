@@ -2,10 +2,10 @@ package com.practicejava.shape;
 
 	
 public abstract class Shape{
-		int x;
-		int y;
+		private int x;
+		private int y;
 
-		void SetShape(int x, int y) {
+		void SetShape(final int x, final int y) {
 			this.x = x;
 			this.y = y;
 		}
@@ -13,23 +13,20 @@ public abstract class Shape{
 		int getX() { return x; }
 		int getY() { return y; }
 		
-		int area(int x, int y) {
+		int area(final int x, final int y) {
 			return 1;
 		}
 		
-		void PrintShapeName(String name) {
-			System.out.println("Shape Name=" + name);
+		public abstract void PrintShapeName(final String name) {
 		}
 		
-		void PrintShapeArea() {
-			System.out.println("Area=" + area(x,y));
+		public abstract void PrintShapeArea() {
 		}
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Rectangle r = new Rectangle();
 		Triangle t = new Triangle();
@@ -44,8 +41,6 @@ public abstract class Shape{
 		c.SetShape(1, 2);
 		c.PrintShapeArea();
 		
-		
-
 	}
 
 }

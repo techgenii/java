@@ -1,4 +1,4 @@
-package com.practicejava.shape;
+package shape;
 
 import java.text.MessageFormat;
 
@@ -8,19 +8,21 @@ public class Rectangle extends Shape {
 		    super.SetShape(x, y);
 	    }
 	
-		int area(final int x, final int y) {
+	    @Override
+		public int area(final int x, final int y) {
 			return (x*y);
 		}
 		
 		@Override
-		void PrintShapeName(final String name) {
+		public void PrintShapeName(final String name) {
 			System.out.println("Rectangle Shape Name=" + name);
 		}
-		
-		void PrintShapeArea() {
+	
+		@Override
+		public void PrintShapeArea() {
             System.out.println("Rectangle length = " + getX());
             System.out.println("Rectangle width = " + getY());
-			System.out.println(MessageFormat.format("Rectangle Area = {0}", area(x, y)));
+			System.out.println(MessageFormat.format("Rectangle Area = {0}", area(getX(), getY())));
             System.out.println();
 		}
 }
